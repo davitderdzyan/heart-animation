@@ -1,0 +1,58 @@
+body {
+  background: linear-gradient(to bottom right, #4e80e6, #9b59b6) no-repeat;
+  height: 100vh;
+  overflow: hidden;
+}
+
+.heart {
+  width: 24px;
+  height: 24px;
+  transform: scale(7);
+}
+
+.heart-svg {
+  fill: transparent;
+}
+
+.cardio-svg {
+  fill: transparent;
+  position: relative;
+  top: -23.75px;
+  left: 6px;
+}
+
+.heart-path {
+  stroke-dasharray: 15 70;
+  animation: heart-animation 2s linear infinite;
+  stroke-dashoffset: 100;
+  animation-fill-mode: forwards;
+}
+
+.cardio-path {
+  stroke-width: 27px;
+  stroke-dasharray: 200 2000;
+  stroke-dashoffset: 100;
+  animation: cardio-animation 2s ease-out infinite;
+  animation-fill-mode: forwards;
+}
+
+@keyframes heart-animation {
+  to {
+    stroke-dashoffset: 185;
+  }
+}
+
+@keyframes cardio-animation {
+  to {
+    stroke-dashoffset: 1000;
+  }
+}
+
+.container {
+  justify-content: center;
+  margin-top: 25%;
+  margin-right: auto;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px 120px;
+}
